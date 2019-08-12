@@ -58,3 +58,17 @@ Class &Class::operator=(Class &&rhs)
   std::cout << "Move Op Called" << std::endl;
   return *this;
 }
+
+// Input and Output stream Operator Overrides
+std::ostream &operator<<(std::ostream &os, const Class &rhs)
+{
+  os << "[Data: " << *rhs.data << ", Num: " << rhs.num << ", Str: " << rhs.str << "]";
+  return os;
+}
+std::istream &operator>>(std::istream &in, Class &rhs)
+{
+  int buff;
+  in >> buff;
+  rhs.num = buff;
+  return in;
+}

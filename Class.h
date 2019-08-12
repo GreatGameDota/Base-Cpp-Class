@@ -5,6 +5,10 @@
 
 class Class
 {
+  // Iostream Operator Overrides
+  friend std::ostream &operator<<(std::ostream &os, const Class &rhs);
+  friend std::istream &operator>>(std::istream &in, Class &rhs);
+
 private:
   int *data;
   int num;
