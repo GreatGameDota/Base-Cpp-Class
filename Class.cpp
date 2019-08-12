@@ -40,7 +40,6 @@ Class &Class::operator=(const Class &rhs)
   data = new int;
   *data = *rhs.data;
   num = rhs.num;
-  str = rhs.str;
   std::cout << "Copy Op Called" << std::endl;
   return *this;
 }
@@ -54,7 +53,6 @@ Class &Class::operator=(Class &&rhs)
   data = rhs.data;
   rhs.data = nullptr;
   num = rhs.num;
-  str = rhs.str;
   std::cout << "Move Op Called" << std::endl;
   return *this;
 }
