@@ -27,12 +27,12 @@ void finish()
 {
   long long finish = PerformanceCounter();
   double frequency = PerformanceFrequency();
-  double elapsedMilliseconds = ((finish - start) * 1000.0) / frequency;
-  long hr = elapsedMilliseconds / 3600000;
-  elapsedMilliseconds = elapsedMilliseconds - 3600000 * hr;
-  long min = elapsedMilliseconds / 60000;
-  elapsedMilliseconds = elapsedMilliseconds - 60000 * min;
-  long sec = elapsedMilliseconds / 1000;
-  elapsedMilliseconds = elapsedMilliseconds - 1000 * sec;
-  std::cout << "\nTime elapsed: " << hr << ":" << min << ":" << sec << ":" << elapsedMilliseconds << std::endl;
+  double milli = ((finish - start) * 1000.0) / frequency;
+  long hr = milli / 3600000;
+  milli = milli - 3600000 * hr;
+  long min = milli / 60000;
+  milli = milli - 60000 * min;
+  long sec = milli / 1000;
+  milli = milli - 1000 * sec;
+  std::cout << "\nTime elapsed: " << hr << ":" << min << ":" << sec << ":" << milli << std::endl;
 }

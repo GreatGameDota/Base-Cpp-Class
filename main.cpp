@@ -1,5 +1,5 @@
 #include "Class.h"
-#include "TimeElapsed.h"
+#include "./helpers/TimeElapsed.h"
 #include <iostream>
 
 using namespace std;
