@@ -34,5 +34,5 @@ void finish()
   milli = milli - 60000 * min;
   long sec = milli / 1000;
   milli = milli - 1000 * sec;
-  std::cout << "\nTime elapsed: " << hr << ":" << min << ":" << sec << ":" << milli << std::endl;
+  std::cout << "\nTime elapsed: " << hr << "h:" << min << "m:" << sec << "s:" << milli << "ms" << std::endl;
 }

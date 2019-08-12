@@ -1,5 +1,7 @@
 #include "Class.h"
 
+std::string Class::str{"None"};
+
 // Constructor
 Class::Class(int d, int n) : num{n}
 {
@@ -7,7 +9,7 @@ Class::Class(int d, int n) : num{n}
   *data = d;
 }
 
-// Copy constructor
+// Copy constructor (Deep copy)
 Class::Class(const Class &source) : Class(*source.data, source.num)
 {
 }
