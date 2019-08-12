@@ -20,6 +20,12 @@ public:
   // Destructor
   ~Class();
 
+  // Override Operators
+  // Copy Op
+  Class &operator=(const Class &rhs);
+  // Move Op
+  Class &operator=(Class &&rhs);
+
   // Getters and Setters
   int getData() const { return *data; } // Method will work with const objs
   void setData(int d) { *data = d; }

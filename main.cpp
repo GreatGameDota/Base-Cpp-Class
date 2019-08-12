@@ -9,12 +9,25 @@ int main()
   startTimer();
 
   Class c{10, 2};
-  Class c2{2, 10};
+  Class c2{c};
   cout << c.getData() << endl;
   cout << c.getNum() << endl;
+  cout << "c2:\n" << c2.getData() << endl;
+  cout << c2.getNum() << endl;
+
   cout << c.getStr() << endl;
   c.setStr("test");
   cout << c2.getStr() << endl;
+
+  Class c3;
+  cout << c3.getData() << endl;
+  cout << c3.getNum() << endl;
+  c3 = c;
+  cout << c3.getData() << endl;
+  cout << c3.getNum() << endl;
+  c3 = Class{2,10};
+  cout << c3.getData() << endl;
+  cout << c3.getNum() << endl;
 
   finish();
   // system("pause");
